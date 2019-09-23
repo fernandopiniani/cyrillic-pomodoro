@@ -1,8 +1,33 @@
-{| cellpadding="4" style="margin:auto; text-align:center;"
-  |-
-  |{{lang|ru|[[A (Cyrillic)|А]]}}<br />{{IPA|/a/}}||{{lang|ru|[[Be (Cyrillic)|Б]]}}<br />{{IPA|/b/}}||{{lang|ru|[[Ve (Cyrillic)|В]]}}<br />{{IPA|/v/}}||{{lang|ru|[[Ge (Cyrillic)|Г]]}}<br />{{IPA|/ɡ/}}||{{lang|ru|[[De (Cyrillic)|Д]]}}<br />{{IPA|/d/}}||{{lang|ru|[[Ye (Cyrillic)|Е]]}}<br />{{IPA|/je/}}||{{lang|ru|[[Yo (Cyrillic)|Ё]]}}<br />{{IPA|/jo/}}||{{lang|ru|[[Zhe (Cyrillic)|Ж]]}}<br />{{IPA|/ʐ/}}||{{lang|ru|[[Ze (Cyrillic)|З]]}}<br />{{IPA|/z/}}||{{lang|ru|[[I (Cyrillic)|И]]}}<br />{{IPA|/i/}}||{{lang|ru|[[Short I|Й]]}}<br />{{IPA|/j/}}
-  |-
-  |{{lang|ru|[[Ka (Cyrillic)|К]]}}<br />{{IPA|/k/}}||{{lang|ru|[[El (Cyrillic)|Л]]}}<br />{{IPA|/l/}}||{{lang|ru|[[Em (Cyrillic)|М]]}}<br />{{IPA|/m/}}||{{lang|ru|[[En (Cyrillic)|Н]]}}<br />{{IPA|/n/}}||{{lang|ru|[[O (Cyrillic)|О]]}}<br />{{IPA|/o/}}||{{lang|ru|[[Pe (Cyrillic)|П]]}}<br />{{IPA|/p/}}||{{lang|ru|[[Er (Cyrillic)|Р]]}}<br />{{IPA|/r/}}||{{lang|ru|[[Es (Cyrillic)|С]]}}<br />{{IPA|/s/}}||{{lang|ru|[[Te (Cyrillic)|Т]]}}<br />{{IPA|/t/}}||{{lang|ru|[[U (Cyrillic)|У]]}}<br />{{IPA|/u/}}||{{lang|ru|[[Ef (Cyrillic)|Ф]]}}<br />{{IPA|/f/}}
-  |-
-  |{{lang|ru|[[Kha (Cyrillic)|Х]]}}<br />{{IPA|/x/<!-- do not change it to "kh", the symbol between slashes is not transliteration, this is phonemic transcription in IPA! -->}}||{{lang|ru|[[Tse (Cyrillic)|Ц]]}}<br />{{IPA|/ts/}}||{{lang|ru|[[Che (Cyrillic)|Ч]]}}<br />{{IPA|/tɕ/}}||{{lang|ru|[[Sha (Cyrillic)|Ш]]}}<br />{{IPA|/ʂ/}}||{{lang|ru|[[Shcha (Cyrillic)|Щ]]}} <br />{{IPA|/ɕː/}}||{{lang|ru|[[Hard sign|Ъ]]}}<br />{{IPA|/-/}}||{{lang|ru|[[Yery|Ы]]}}<br /> {{IPA|/ɨ/}}||{{lang|ru|[[Soft sign|Ь]]}}<br />{{IPA|/ʲ/}}||{{lang|ru|[[E (Cyrillic)|Э]]}}<br />{{IPA|/e/}}||{{lang|ru|[[Yu (Cyrillic)|Ю]]}}<br />{{IPA|/ju/}}||{{lang|ru|[[Ya (Cyrillic)|Я]]}}<br />{{IPA|/ja/}}
-  |}
+Аа	01-Russian alphabet-А а.svg	А а	а [a]	азъ [as]	/a/	a	father	два dva "two"	1	U+0410 / U+0430
+Бб	02-Russian alphabet-Б б.svg	Б б	бэ [bɛ]	буки [ˈbukʲɪ]	/b/ or /bʲ/	b	bad	оба óba "both"	–	U+0411 / U+0431
+Вв	03-Russian alphabet-В в.svg	В в	вэ [vɛ]	вѣди [ˈvʲedʲɪ]	/v/ or /vʲ/	v	vine	вот vot "here"	2	U+0412 / U+0432
+Гг	04-Russian alphabet-Г г.svg	Г г	гэ [ɡɛ]	глаголь [ɡɫɐˈɡolʲ]	/ɡ/ or /gʲ/	g	go	год god "year"	3	U+0413 / U+0433
+Дд	05-Russian alphabet-Д д.svg	Д д	дэ [dɛ]	добро [dɐˈbro]	/d/ or /dʲ/	d	do	да da "yes"	4	U+0414 / U+0434
+Ее	06-Russian alphabet-Е е.svg	Е е	е [je]	есть [jesʲtʲ]	/je/, / ʲe/ or /e/	e, ye	yes	не ne "not"	5	U+0415 / U+0435 
+Ёё	07-Russian alphabet-Ё ё.svg	Ё ё	ё [jo]	–	/jo/ or / ʲo/	ë, yo, jo	your	ёж yozh "hedgehog"	–	U+0401 / U+0451
+Жж	08-Russian alphabet-Ж ж.svg	Ж ж	жэ [ʐɛ] (About this soundlisten)	живѣте [ʐɨˈvʲetʲɪ][a]	/ʐ/	zh, ž	pleasure	жук zhuk "beetle"	–	U+0416 / U+0436
+Зз	09-Russian alphabet-З з.svg	З з	зэ [zɛ]	земля [zʲɪˈmlʲæ]	/z/ or /zʲ/	z	zoo	зной znoy "heat"	7	U+0417 / U+0437
+Ии	10-Russian alphabet-И и.svg	И и	и [i]	иже [ˈiʐɨ]	/i/, / ʲi/, or /ɨ/	i	police	или íli "or"	8	U+0418 / U+0438
+Йй	11-Russian alphabet-Й й.svg	Й й	и краткое [i ˈkratkəjɪ]	и съ краткой [ɪ s ˈkratkəj]	/j/	y, i, j	toy	мой moy "my, mine"	–	U+0419 / U+0439
+Кк	12-Russian alphabet-К к.svg	К к	ка [ka]	како [ˈkakə]	/k/ or /kʲ/	k	kept	кто kto "who"	20	U+041A / U+043A
+Лл†	13-Russian alphabet-Л л.svg	Л л	эл or эль [ɛɫ] or [ɛlʲ]	люди [ˈlʲʉdʲɪ]	/ɫ/ or /lʲ/	l	feel or lamp	ли li "whether"	30	U+041B / U+043B
+Мм	14-Russian alphabet-М м.svg	М м	эм [ɛm]	мыслѣте [mɨˈsʲlʲetʲɪ][2]	/m/ or /mʲ/	m	map	меч mech "sword"	40	U+041C / U+043C
+Нн	15-Russian alphabet-Н н.svg	Н н	эн [ɛn]	нашъ [naʂ]	/n/ or /nʲ/	n	not	но no "but"	50	U+041D / U+043D
+Оо	16-Russian alphabet-О о.svg	О о	о [о]	онъ [on]	/o/	o	more	он on "he"	70	U+041E / U+043E
+Пп	17-Russian alphabet-П п.svg	П п	пэ [pɛ]	покой [pɐˈkoj]	/p/ or /pʲ/	p	pet	под pod "under"	80	U+041F / U+043F
+Рр	18-Russian alphabet-Р р.svg	Р р	эр [ɛr]	рцы [rtsɨ]	/r/ or /rʲ/	r	rolled r	река reká "river"	100	U+0420 / U+0440
+Сс	19-Russian alphabet-С с.svg	С с	эс [ɛs]	слово [ˈsɫovə]	/s/ or /sʲ/	s	set	если yésli "if"	200	U+0421 / U+0441
+Тт	20-Russian alphabet-Т т.svg	Т т	тэ [tɛ]	твердо [ˈtvʲerdə]	/t/ or /tʲ/	t	top	тот tot "that"	300	U+0422 / U+0442
+Уу	21-Russian alphabet-У у.svg	У у	у [u]	укъ [uk]	/u/	u	tool	уже uzhé "already"	400	U+0423 / U+0443
+Фф	22-Russian alphabet-Ф ф.svg	Ф ф	эф [ɛf]	фертъ [fʲert]	/f/ or /fʲ/	f	face	форма fórma "form"	500	U+0424 / U+0444
+Хх	23-Russian alphabet-Х х.svg	Х х	ха [xa]	хѣръ [xʲer]	/x/ or /xʲ/	kh, h, x	loch	дух dukh "spirit"	600	U+0425 / U+0445
+Цц	24-Russian alphabet-Ц ц.svg	Ц ц	цэ [tsɛ]	цы [tsɨ]	/ts/	ts, c	sits	конец konéts "end"	900	U+0426 / U+0446
+Чч	25-Russian alphabet-Ч ч.svg	Ч ч	че [tɕe]	червь [tɕerfʲ]	/tɕ/	ch, č	chat	час chas "hour"	90	U+0427 / U+0447
+Шш	26-Russian alphabet-Ш ш.svg	Ш ш	ша [ʂa]	ша [ʂa]	/ʂ/	sh, š	sharp	ваш vash "yours"	–	U+0428 / U+0448
+Щщ	27-Russian alphabet-Щ щ.svg	Щ щ	ща [ɕɕæ]	ща [ɕtɕæ]	/ɕɕ/, /ɕ/	shch, šč	sheer (in some dialects pronounced as in pushchair)	щека shcheká "cheek"	–	U+0429 / U+0449 
+Ъъ	28-Russian alphabet-ъ.svg	Ъ ъ	твёрдый знак [ˈtvʲɵrdɨj znak ] (About this soundlisten)	еръ [jer]		ʺ	(called "hard sign") silent, prevents palatalization of the preceding consonant	объект obyékt "object"	–	U+042A / U+044A
+Ыы	29-Russian alphabet-ы.svg	Ы ы	ы [ɨ]	еры [jɪˈrɨ]	[ɨ]	y	roses, hit	ты ty "you"	–	U+042B / U+044B 
+Ьь	30-Russian alphabet-ь.svg	Ь ь	мягкий знак [ˈmʲæxʲkʲɪj znak ] (About this soundlisten)	ерь [jerʲ]	/ ʲ/	'	(called "soft sign") silent, palatalizes the preceding consonant (if phonologically possible)	весь vyes' "all"	–	U+042C / U+044C
+Ээ	31-Russian alphabet-Э э.svg	Э э	э [ɛ]	э оборотное [ˈɛ ɐbɐˈrotnəjɪ]	/e/	è, e	met	это èto "this, that"	–	U+042D / U+044D
+Юю	32-Russian alphabet-Ю ю.svg	Ю ю	ю [ju]	ю [ju]	/ju/ or / ʲu/	yu, ju	use	юг yug "south"	–	U+042E / U+044E
+Яя	33-Russian alphabet-Я я.svg	Я я	я [ja]	я [ja]	/ja/ or / ʲa/	ya, ja	yard	ряд ryad "row"	–	U+042F / U+044F
