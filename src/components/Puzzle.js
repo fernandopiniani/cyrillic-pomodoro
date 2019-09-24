@@ -43,17 +43,33 @@ const Option = ({ letter, ...others }) =>
 
 const Puzzle = () => {
 
-  const [letters, setLetters] = useState(getRandomLetters());
+  const [counter, setCounter] = useState(0);
+  const [options, setOptions] = useState(getRandomLetters());
+  const [letter, setLetter] = useState(getRandomItemsFrom(1, options)[0]);
+
+  useEffect(() => {
+    console.log(getRandomItemsFrom(1, options))
+  })
 
   const setRandomLetters = () => {
-    setLetters(getRandomLetters())
+    const randomLetters = getRandomLetters()
+    setOptions(randomLetters)
+    setLetter(getRandomItemsFrom(1, randomLetters)[0])
+  }
+
+  const chooseOption = (option) => {
+    if(letter.id === option.id) {
+      setRandomLetters()      
+      setCounter(counter + 1)
+    }
   }
 
   return (
     <div className="Puzzle">
-      <Letter letter={letters[0]} />
-      {letters.map((l) =>
-        <div key={l.id} onClick={() => setRandomLetters()}>
+      <div>Counter: {counter}</div>
+      <Letter letter={letter} />
+      {options.map((l) =>
+        <div key={l.id} onClick={() => chooseOption(l)}>
           <Option letter={l} />
         </div>
       )}
