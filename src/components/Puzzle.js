@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import cyrillicAlphabet from '../resources/cyrillic.json';
 
 const getRandomInt = (min, max) => {
@@ -11,24 +11,21 @@ const getRandomIndexFrom = array =>
   getRandomInt(0, array.length)
 
 const removeItemFromArray = (index, array) => 
-  array.slice(index)[0]
-
+  array.splice(index, 1)[0]
 
 const getRandomItemsFrom = (numberEntries, array) => {
   let rdItems = []
   let leftItems = [ ...array ]
   while(rdItems.length < numberEntries) {
     const i = getRandomIndexFrom(leftItems)
-    rdItems.push(removeItemFromArray(i, leftItems))
+    const removed = removeItemFromArray(i, leftItems)
+    rdItems.push(removed)
   }
   return rdItems
 }
 
 const getRandomLetters = () => 
   getRandomItemsFrom(3, Object.values(cyrillicAlphabet))
-
-const letters = getRandomLetters()
-
 
 const Letter = ({ letter, ...others }) =>
   <div className="Letter" { ...others }>
@@ -45,11 +42,18 @@ const Option = ({ letter, ...others }) =>
   </div>
 
 const Puzzle = () => {
+
+  const [letters, setLetters] = useState(getRandomLetters());
+
+  const setRandomLetters = () => {
+    setLetters(getRandomLetters())
+  }
+
   return (
     <div className="Puzzle">
       <Letter letter={letters[0]} />
       {letters.map((l) =>
-        <div key={l.id} >
+        <div key={l.id} onClick={() => setRandomLetters()}>
           <Option letter={l} />
         </div>
       )}
