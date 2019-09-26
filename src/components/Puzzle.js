@@ -28,17 +28,17 @@ const getRandomLetters = () =>
   getRandomItemsFrom(3, Object.values(cyrillicAlphabet))
 
 const Letter = ({ letter, ...others }) =>
-  <div className="Letter" { ...others }>
-    <p className="LetterText">
+  <div className="Letter has-text-centered" { ...others }>
+    <div className="title has-text-centered LetterText">
       {letter.upper}
-    </p>
+    </div>
   </div>
 
 const Option = ({ letter, ...others }) =>
-  <div className="Option" { ...others }>
-    <p className="OptionText">
+  <div className="Option has-text-centered" { ...others }>
+    <div className="button has-text-centered OptionText">
       {letter.transliteration}
-    </p>
+    </div>
   </div>
 
 const Puzzle = () => {

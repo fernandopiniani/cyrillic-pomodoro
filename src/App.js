@@ -1,6 +1,6 @@
 import React from 'react';
 import Puzzle from './components/Puzzle';
-import './App.css';
+import './App.sass';
 
 function App() {
   return (
