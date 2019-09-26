@@ -28,18 +28,25 @@ const getRandomLetters = () =>
   getRandomItemsFrom(5, Object.values(cyrillicAlphabet))
 
 const Letter = ({ letter, ...others }) =>
-  <div className="container center Letter" { ...others }>
+  <div className="center Letter" { ...others }>
     <div className="box title has-text-centered LetterText">
       {letter.upper}
     </div>
   </div>
 
-const Option = ({ letter, ...others }) =>
-  <div className="container center Option" { ...others }>
-    <div className="button has-text-centered is-primary OptionText" style={{ width: "50%" }}>
+const Option = ({ letter, ...others }) => {
+  const [ clicked, setClicked ] = useState(false)
+
+  return (<div className="container center Option" { ...others }>
+    <div 
+      className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`} 
+      style={{ width: "50%" }}
+      onClick={() => setClicked(true)}
+    >
       {letter.transliteration}
     </div>
-  </div>
+  </div>)
+}
 
 const Puzzle = () => {
 
