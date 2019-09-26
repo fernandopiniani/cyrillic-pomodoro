@@ -2,3 +2,12 @@
 
 // Import only what you need from Bulma
 @import '../node_modules/bulma/bulma.sass';
+
+// Global styles
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+

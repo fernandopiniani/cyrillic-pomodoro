@@ -25,18 +25,18 @@ const getRandomItemsFrom = (numberEntries, array) => {
 }
 
 const getRandomLetters = () => 
-  getRandomItemsFrom(3, Object.values(cyrillicAlphabet))
+  getRandomItemsFrom(5, Object.values(cyrillicAlphabet))
 
 const Letter = ({ letter, ...others }) =>
-  <div className="Letter has-text-centered" { ...others }>
-    <div className="title has-text-centered LetterText">
+  <div className="container center Letter" { ...others }>
+    <div className="box title has-text-centered LetterText">
       {letter.upper}
     </div>
   </div>
 
 const Option = ({ letter, ...others }) =>
-  <div className="Option has-text-centered" { ...others }>
-    <div className="button has-text-centered OptionText">
+  <div className="container center Option" { ...others }>
+    <div className="button has-text-centered is-primary OptionText" style={{ width: "50%" }}>
       {letter.transliteration}
     </div>
   </div>
@@ -66,10 +66,10 @@ const Puzzle = () => {
 
   return (
     <div className="Puzzle">
-      <div>Counter: {counter}</div>
-      <Letter letter={letter} />
+      <div className="center" style={{ margin: "20px"}}>Counter: {counter}</div>
+      <Letter style={{ margin: "20px"}} letter={letter} />
       {options.map((l) =>
-        <div key={l.id} onClick={() => chooseOption(l)}>
+        <div style={{ margin: '5px' }} key={l.id} onClick={() => chooseOption(l)}>
           <Option letter={l} />
         </div>
       )}
