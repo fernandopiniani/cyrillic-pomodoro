@@ -36,7 +36,7 @@ const Letter = ({ letter, ...others }) =>
 
 const Option = ({ letter, ...others }) => {
   const [ clicked, setClicked ] = useState(false)
-
+  
   return (<div className="container center Option" { ...others }>
     <div 
       className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`} 
@@ -53,10 +53,6 @@ const Puzzle = () => {
   const [counter, setCounter] = useState(0);
   const [options, setOptions] = useState(getRandomLetters());
   const [letter, setLetter] = useState(getRandomItemsFrom(1, options)[0]);
-
-  useEffect(() => {
-    console.log(getRandomItemsFrom(1, options))
-  })
 
   const setRandomLetters = () => {
     const randomLetters = getRandomLetters()
@@ -76,7 +72,7 @@ const Puzzle = () => {
       <div className="center" style={{ margin: "20px"}}>Counter: {counter}</div>
       <Letter style={{ margin: "20px"}} letter={letter} />
       {options.map((l) =>
-        <div style={{ margin: '5px' }} key={l.id} onClick={() => chooseOption(l)}>
+        <div style={{ margin: '5px' }} key={`${counter}${l.id}`} onClick={() => chooseOption(l)}>
           <Option letter={l} />
         </div>
       )}
