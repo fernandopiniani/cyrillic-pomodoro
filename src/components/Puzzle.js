@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import cyrillicAlphabet from '../resources/cyrillic.json';
 
 const getRandomInt = (min, max) => {
