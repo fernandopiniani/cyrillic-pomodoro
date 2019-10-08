@@ -7,7 +7,12 @@ const ControlButton = props =>
     {...props} 
   />
 
-const TimerControl = () =>
+const TimerControl = ({
+  isActive,
+  onClickStart,
+  onClickNext,
+  onClickPause
+}) =>
   <div className="container TimerControl" 
       style={{ 
         marginLeft: '25%',
@@ -15,11 +20,16 @@ const TimerControl = () =>
         marginTop: 30,
       }}
   >
-    <div className="columns">
-      <ControlButton>Start</ControlButton>
-      <ControlButton>Pause</ControlButton>
-      <ControlButton>Stop</ControlButton>
-    </div>
+      { !isActive 
+        ? <div className="columns">
+            <ControlButton onClick={onClickStart}>Start</ControlButton>
+            <ControlButton onClick={onClickNext}>Next</ControlButton>
+          </div>
+        : <div className="columns">
+            <ControlButton onClick={onClickPause}>Pause</ControlButton>
+            <ControlButton onClick={onClickNext}>Next</ControlButton>
+          </div>
+      }
   </div>
 
 
