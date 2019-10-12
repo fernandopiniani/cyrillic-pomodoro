@@ -7,9 +7,7 @@ const Timer = () => {
   const [timeLeft, setTimeLeft] = useState(isWorkTime ? 25 : 5)
   const [isActive, setActive] = useState(false)
 
-  const _finish = () => {
-    setWorkTime(isWorkTime => !isWorkTime)
-  }
+  const _finish = () => setWorkTime(isWorkTime => !isWorkTime)
   const _resume = () => setActive(true)
   const _pause = () => setActive(false)
   const _reset = () => setTimeLeft(isWorkTime => isWorkTime ? 25 : 5)
@@ -46,7 +44,7 @@ const Timer = () => {
   }, [isWorkTime])
   
   return (
-    <div className="container Timer" onClick={() => setActive(true)}>
+    <div className="container Timer">
       <div className="center title"> {timeLeft} </div>
       <TimerControl
         isActive={isActive}
