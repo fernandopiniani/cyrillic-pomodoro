@@ -13,7 +13,7 @@ const Timer = () => {
   const _finish = () => setWorkTime(isWorkTime => !isWorkTime)
   const _resume = () => setActive(true)
   const _pause = () => setActive(false)
-  const _reset = () => setTimeLeft(isWorkTime => isWorkTime ? 25 : 5)
+  const _reset = () => setTimeLeft(isWorkTime ? 25 : 5)
   const _next = () => {
     _finish()
     _pause()
@@ -50,7 +50,7 @@ const Timer = () => {
     <div className="container Timer">
       <CircularProgressbar
         value={timeLeft}
-        maxValue={25}
+        maxValue={isWorkTime ? 25 : 5}
         text={timeLeft}
         className="circular-progress-bar"
       />
