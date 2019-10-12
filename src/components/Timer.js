@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import TimerControl from './TimerControl'
 import Puzzle from './Puzzle'
+import { CircularProgressbar } from 'react-circular-progressbar';
+
+import 'react-circular-progressbar/dist/styles.css';
 
 const Timer = () => {
   const [isWorkTime, setWorkTime] = useState(true)
@@ -45,7 +48,12 @@ const Timer = () => {
   
   return (
     <div className="container Timer">
-      <div className="center title"> {timeLeft} </div>
+      <CircularProgressbar
+        value={timeLeft}
+        maxValue={25}
+        text={timeLeft}
+        className="circular-progress-bar"
+      />
       <TimerControl
         isActive={isActive}
         onClickStart={_resume} 

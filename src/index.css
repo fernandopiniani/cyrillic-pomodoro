@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.circular-progress-bar {
+  display: block;
+  margin: 0 auto;
+  width: 75px !important;
+}
+.CircularProgressbar-text {
+  font-size: 50px !important;
+}
