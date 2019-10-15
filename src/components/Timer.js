@@ -5,15 +5,24 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 
 import 'react-circular-progressbar/dist/styles.css';
 
+const WORK_TIME = 1500
+const INTERVAL_TIME = 300
+
+const formatTime = seconds => {
+  const minutes = Math.floor(seconds/60).toString().padStart(2, '0')
+  const minuteSeconds = (seconds%60).toString().padStart(2, '0')
+  return `${minutes}:${minuteSeconds}`
+}
+
 const Timer = () => {
   const [isWorkTime, setWorkTime] = useState(true)
-  const [timeLeft, setTimeLeft] = useState(isWorkTime ? 25 : 5)
+  const [timeLeft, setTimeLeft] = useState(isWorkTime ? WORK_TIME : INTERVAL_TIME)
   const [isActive, setActive] = useState(false)
 
   const _finish = () => setWorkTime(isWorkTime => !isWorkTime)
   const _resume = () => setActive(true)
   const _pause = () => setActive(false)
-  const _reset = () => setTimeLeft(isWorkTime ? 25 : 5)
+  const _reset = () => setTimeLeft(isWorkTime ? WORK_TIME : INTERVAL_TIME)
   const _next = () => {
     _finish()
     _pause()
@@ -51,7 +60,7 @@ const Timer = () => {
       <CircularProgressbar
         value={timeLeft}
         maxValue={isWorkTime ? 25 : 5}
-        text={timeLeft}
+        text={formatTime(timeLeft)}
         className="circular-progress-bar"
       />
       <TimerControl
