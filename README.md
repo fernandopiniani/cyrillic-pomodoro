@@ -1,7 +1,7 @@
 ![Cyrillic Pomodoro Logo](./public/logo192.png?raw=true)
 # Cyrillic Pomodoro
 
-Take 25 minutes working and 5 minutes learning cyrillic alphabet (for russian language by then). 
+Take 25 minutes working and 5 minutes learning cyrillic alphabet. 
 
 ## How to run
 
