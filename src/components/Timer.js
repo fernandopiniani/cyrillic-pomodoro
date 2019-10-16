@@ -59,7 +59,7 @@ const Timer = () => {
     <div className="container Timer">
       <CircularProgressbar
         value={timeLeft}
-        maxValue={isWorkTime ? 25 : 5}
+        maxValue={isWorkTime ? WORK_TIME : INTERVAL_TIME}
         text={formatTime(timeLeft)}
         className="circular-progress-bar"
       />
