@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cyrillicAlphabet from '../resources/cyrillic.json';
+import 'bulma-tooltip';
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
@@ -10,7 +11,7 @@ const getRandomInt = (min, max) => {
 const getRandomIndexFrom = array =>
   getRandomInt(0, array.length)
 
-const removeItemFromArray = (index, array) => 
+const removeItemFromArray = (index, array) =>
   array.splice(index, 1)[0]
 
 const getRandomItemsFrom = (numberEntries, array) => {
@@ -24,7 +25,7 @@ const getRandomItemsFrom = (numberEntries, array) => {
   return rdItems
 }
 
-const getRandomLetters = () => 
+const getRandomLetters = () =>
   getRandomItemsFrom(5, Object.values(cyrillicAlphabet))
 
 const Letter = ({ letter, ...others }) =>
@@ -36,15 +37,21 @@ const Letter = ({ letter, ...others }) =>
 
 const Option = ({ letter, ...others }) => {
   const [ clicked, setClicked ] = useState(false)
-  
+
   return (<div className="container center Option" { ...others }>
-    <div 
-      className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`} 
+    <div
+      className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`}
       style={{ width: "50%" }}
       onClick={() => setClicked(true)}
     >
       {letter.transliteration}
     </div>
+      <button className="button is-tooltip-info tooltip engEqCard" data-tooltip={letter.engEq}>
+        <span className="icon has-text-info">
+          <i className="fas fa-info-circle"/>
+        </span>
+      </button>
+
   </div>)
 }
 
@@ -62,7 +69,7 @@ const Puzzle = () => {
 
   const chooseOption = (option) => {
     if(letter.id === option.id) {
-      setRandomLetters()      
+      setRandomLetters()
       setCounter(counter + 1)
     }
   }

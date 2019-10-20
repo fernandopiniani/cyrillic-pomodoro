@@ -20,3 +20,17 @@ code {
 .CircularProgressbar-text {
   font-size: 30px !important;
 }
+
+.Timer {
+  padding-top: 25px;
+}
+
+.engEqCard {
+  cursor: help;
+  margin-left: 1%;
+  width: 5%;
+}
+
+#root > div > div > div.Puzzle > div > div > button {
+  cursor: default;
+}
