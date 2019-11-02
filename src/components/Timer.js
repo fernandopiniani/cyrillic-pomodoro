@@ -32,6 +32,7 @@ const Timer = () => {
     let timer
     if(isActive) {
       timer = setInterval(() => {
+        navigator.vibrate([300, 300, 300])
         setTimeLeft(timeLeft => timeLeft - 1)
       }, 1000);
     } else {
@@ -43,14 +44,13 @@ const Timer = () => {
   }, [ isActive ])
 
   useEffect(() => {
-    console.log('timeLeft changed:', timeLeft)
     if(timeLeft === 0) {
+      new Notification('Your time is up!')
       _next()
     }
   }, [ timeLeft ])
 
   useEffect(() => {
-    console.log('isWorkTime changed:', isWorkTime)
     _reset()
   }, [isWorkTime])
   
