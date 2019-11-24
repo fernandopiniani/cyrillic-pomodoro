@@ -35,14 +35,17 @@ const Letter = ({ letter, ...others }) =>
     </div>
   </div>
 
-const Option = ({ letter, ...others }) => {
+const Option = ({ letter, onClick, ...others }) => {
   const [ clicked, setClicked ] = useState(false)
 
   return (<div className="container center Option" { ...others }>
     <div
       className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`}
       style={{ width: "50%" }}
-      onClick={() => setClicked(true)}
+      onClick={() => { 
+        setClicked(true)
+        onClick()
+      }}
     >
       {letter.transliteration}
     </div>
@@ -79,8 +82,8 @@ const Puzzle = () => {
       <div className="center" style={{ margin: "20px"}}>Counter: {counter}</div>
       <Letter style={{ margin: "20px"}} letter={letter} />
       {options.map((l) =>
-        <div style={{ margin: '5px' }} key={`${counter}${l.id}`} onClick={() => chooseOption(l)}>
-          <Option letter={l} />
+        <div style={{ margin: '5px' }} key={`${counter}${l.id}`}>
+          <Option letter={l} onClick={() => chooseOption(l)} />
         </div>
       )}
     </div>
