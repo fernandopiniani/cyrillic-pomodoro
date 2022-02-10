@@ -5,7 +5,7 @@
   "dependencies": {
     "bulma": "^0.7.5",
     "bulma-tooltip": "^3.0.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
