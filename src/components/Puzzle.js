@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import cyrillicAlphabet from '../resources/cyrillic.json';
+import cyrillicAlphabet from '../resources/cyrillic/cyrillic.json';
 import 'bulma-tooltip';
 
 const getRandomInt = (min, max) => {
@@ -71,7 +71,7 @@ const Puzzle = () => {
   }
 
   const chooseOption = (option) => {
-    if(letter.id === option.id) {
+    if(letter.symbol === option.symbol) {
       setRandomLetters()
       setCounter(counter + 1)
     }
@@ -82,7 +82,7 @@ const Puzzle = () => {
       <div className="center" style={{ margin: "20px"}}>Counter: {counter}</div>
       <Letter style={{ margin: "20px"}} letter={letter} />
       {options.map((l) =>
-        <div style={{ margin: '5px' }} key={`${counter}${l.id}`}>
+        <div style={{ margin: '5px' }} key={`${counter}${l.symbol}`}>
           <Option letter={l} onClick={() => chooseOption(l)} />
         </div>
       )}
