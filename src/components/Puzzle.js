@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import cyrillicAlphabet from '../resources/cyrillic/cyrillic.json';
+import cyrillicAlphabet from '../resources/hangul/hangul.json';
 import 'bulma-tooltip';
 
 const getRandomInt = (min, max) => {
@@ -31,7 +31,7 @@ const getRandomLetters = () =>
 const Letter = ({ letter, ...others }) =>
   <div className="center Letter" { ...others }>
     <div className="box title has-text-centered LetterText">
-      {letter.upper}
+      {letter.symbol}
     </div>
   </div>
 
@@ -59,7 +59,9 @@ const Option = ({ letter, onClick, ...others }) => {
       }}
     >{letter.transliteration}</div>
     <div style={{ width: "25%" }} >
-      <Tip letter={letter}/>
+      {letter.tip &&
+        <Tip letter={letter}/>
+      }
     </div>
   </div>)
 }
