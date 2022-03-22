@@ -35,10 +35,21 @@ const Letter = ({ letter, ...others }) =>
     </div>
   </div>
 
+const Tip = ({ letter }) => {
+  return (
+    <button className="button is-tooltip-active tooltip tipCard" data-tooltip={letter.tip}>
+        <span className="icon has-text-info">
+          <i className="fas fa-info-circle"/>
+        </span>
+    </button>
+  )
+}
+
 const Option = ({ letter, onClick, ...others }) => {
   const [ clicked, setClicked ] = useState(false)
 
   return (<div className="container center Option" { ...others }>
+    <div style={{ width: "25%" }} />
     <div
       className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`}
       style={{ width: "50%" }}
@@ -46,15 +57,10 @@ const Option = ({ letter, onClick, ...others }) => {
         setClicked(true)
         onClick()
       }}
-    >
-      {letter.transliteration}
+    >{letter.transliteration}</div>
+    <div style={{ width: "25%" }} >
+      <Tip letter={letter}/>
     </div>
-      <button className="button is-tooltip-info tooltip engEqCard" data-tooltip={letter.engEq}>
-        <span className="icon has-text-info">
-          <i className="fas fa-info-circle"/>
-        </span>
-      </button>
-
   </div>)
 }
 
