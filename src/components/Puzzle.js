@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import cyrillicAlphabet from '../resources/cyrillic.json';
+import cyrillicAlphabet from '../resources/hangul/hangul.json';
 import 'bulma-tooltip';
 
 const getRandomInt = (min, max) => {
@@ -31,14 +31,25 @@ const getRandomLetters = () =>
 const Letter = ({ letter, ...others }) =>
   <div className="center Letter" { ...others }>
     <div className="box title has-text-centered LetterText">
-      {letter.upper}
+      {letter.symbol}
     </div>
   </div>
+
+const Tip = ({ letter }) => {
+  return (
+    <button className="button is-tooltip-active tooltip tipCard" data-tooltip={letter.tip}>
+        <span className="icon has-text-info">
+          <i className="fas fa-info-circle"/>
+        </span>
+    </button>
+  )
+}
 
 const Option = ({ letter, onClick, ...others }) => {
   const [ clicked, setClicked ] = useState(false)
 
   return (<div className="container center Option" { ...others }>
+    <div style={{ width: "25%" }} />
     <div
       className={`button has-text-centered ${clicked ? 'is-danger' : 'is-primary'} OptionText`}
       style={{ width: "50%" }}
@@ -46,15 +57,12 @@ const Option = ({ letter, onClick, ...others }) => {
         setClicked(true)
         onClick()
       }}
-    >
-      {letter.transliteration}
+    >{letter.transliteration}</div>
+    <div style={{ width: "25%" }} >
+      {letter.tip &&
+        <Tip letter={letter}/>
+      }
     </div>
-      <button className="button is-tooltip-info tooltip engEqCard" data-tooltip={letter.engEq}>
-        <span className="icon has-text-info">
-          <i className="fas fa-info-circle"/>
-        </span>
-      </button>
-
   </div>)
 }
 
@@ -71,7 +79,7 @@ const Puzzle = () => {
   }
 
   const chooseOption = (option) => {
-    if(letter.id === option.id) {
+    if(letter.symbol === option.symbol) {
       setRandomLetters()
       setCounter(counter + 1)
     }
@@ -82,7 +90,7 @@ const Puzzle = () => {
       <div className="center" style={{ margin: "20px"}}>Counter: {counter}</div>
       <Letter style={{ margin: "20px"}} letter={letter} />
       {options.map((l) =>
-        <div style={{ margin: '5px' }} key={`${counter}${l.id}`}>
+        <div style={{ margin: '5px' }} key={`${counter}${l.symbol}`}>
           <Option letter={l} onClick={() => chooseOption(l)} />
         </div>
       )}
